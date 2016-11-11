@@ -1,0 +1,40 @@
+package platform.ios.runner;
+
+import common.AbstractPage;
+import common.BaseAcceptance;
+import platform.Platform;
+import platform.ios.pages.HomePage;
+
+public class BaseIOSTest extends BaseAcceptance {
+
+    /*
+     * Set the platform name
+     */
+    Platform iosPlatform = new Platform("ios");
+
+    /*
+     * Instantiate page object(s)
+     */
+    protected HomePage homePage = new HomePage();
+
+    @Override
+    public void setPlatform(Platform platform) {
+        super.setPlatform(platform);
+    }
+
+    @Override
+    public void setPages(AbstractPage abstractPage) {
+        super.setPages(abstractPage);
+    }
+
+    @Override
+    public void setUp() throws Exception {
+
+        // Invoke the super class setUp() method
+        this.setPages(homePage);
+
+        this.setPlatform(iosPlatform);
+        super.setUp();
+    }
+
+}
