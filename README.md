@@ -3,7 +3,7 @@
 
 **note:**
 ```
-public String solution(Obat panadol, Obat koyoHot, Obat tolakAngin){ 
+public Obat solution(Obat panadol, Obat koyoHot, Obat tolakAngin){ 
   if (brain.equals("Mumet")){
     return panadol;
   } else if(body.equals("Not Delicious")) {
