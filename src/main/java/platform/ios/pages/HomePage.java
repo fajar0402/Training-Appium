@@ -3,6 +3,8 @@ package platform.ios.pages;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import static org.junit.Assert.assertEquals;
+
+import org.openqa.selenium.WebElement;
 import platform.ios.modules.AbstractOGModule;
 
 /**
@@ -12,8 +14,14 @@ public class HomePage extends AbstractOGModule {
 
     // init your page object in home page
 
-    @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[2]")
-    private MobileElement homeDiscoverText;
+    @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[2]") // Xpath
+    private WebElement homeDiscoverText;
+
+    @iOSFindBy(xpath = "//UIAStaticText[@name='Discover the New Olive Garden®']")
+    private MobileElement homeDiscoverName;
+
+    @iOSFindBy(xpath = "//UIAStaticText[contains(@name, 'Discover')]")
+    private MobileElement homeDiscoverContains;
 
     @iOSFindBy(xpath = "//UIATableView[2]/UIATableCell[2]/UIAStaticText[1]")
     private MobileElement findRestaurantOption;
@@ -22,7 +30,7 @@ public class HomePage extends AbstractOGModule {
      * To check Home Discover in Home page
      */
     public void checkHomeDiscoverText(){
-        assertEquals("Text is not match", "", homeDiscoverText.getText());
+        assertEquals("Text is not match", "Discover the New Olive Garden®", homeDiscoverText.getText());
     }
 
     /**
@@ -31,4 +39,5 @@ public class HomePage extends AbstractOGModule {
     public void clickFindRestaurantOptionsBtn(){
         findRestaurantOption.click();
     }
+
 }

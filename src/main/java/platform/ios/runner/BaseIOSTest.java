@@ -4,6 +4,7 @@ import common.AbstractPage;
 import common.BaseAcceptance;
 import platform.Platform;
 import platform.ios.pages.HomePage;
+import platform.ios.pages.LoginPage;
 
 public class BaseIOSTest extends BaseAcceptance {
 
@@ -16,6 +17,7 @@ public class BaseIOSTest extends BaseAcceptance {
      * Instantiate page object(s)
      */
     protected HomePage homePage = new HomePage();
+    protected LoginPage loginPage = new LoginPage();
 
     @Override
     public void setPlatform(Platform platform) {
@@ -32,6 +34,7 @@ public class BaseIOSTest extends BaseAcceptance {
 
         // Invoke the super class setUp() method
         this.setPages(homePage);
+        this.setPages(loginPage);
 
         this.setPlatform(iosPlatform);
         super.setUp();

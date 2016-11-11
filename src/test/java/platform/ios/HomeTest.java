@@ -11,6 +11,7 @@ public class HomeTest extends BaseIOSTest {
     @Test
     public void Test(){
 
+        loginPage.inputPassword("asd");
     }
 
 }
