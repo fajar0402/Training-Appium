@@ -1,0 +1,25 @@
+group 'Appium Automation'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.7'
+    compile group: 'io.appium', name: 'java-client', version: '3.2.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '2.53.0'
+    compile group: 'junit', name: 'junit-dep', version: '4.10'
+    testCompile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    testCompile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.21'
+    compile group: 'org.slf4j', name: 'log4j-over-slf4j', version: '1.7.21'
+    compile group: 'commons-validator', name: 'commons-validator', version: '1.4.0'
+
+}
