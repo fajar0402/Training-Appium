@@ -3,6 +3,7 @@ package platform.ios.pages;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
 import platform.ios.modules.AbstractOGModule;
@@ -14,7 +15,7 @@ public class HomePage extends AbstractOGModule {
 
     // init your page object in home page
 
-    @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[2]") // Xpath
+    @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[2]")
     private WebElement homeDiscoverText;
 
     @iOSFindBy(xpath = "//UIAStaticText[@name='Discover the New Olive Garden®']")
@@ -37,6 +38,7 @@ public class HomePage extends AbstractOGModule {
      * To click Find Restaurant Option in Home page
      */
     public void clickFindRestaurantOptionsBtn(){
+        assertTrue("Find Restaurant button is missing", findRestaurantOption.isDisplayed());
         findRestaurantOption.click();
     }
 

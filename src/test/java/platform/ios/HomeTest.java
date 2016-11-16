@@ -1,6 +1,7 @@
 package platform.ios;
 
 import org.junit.Test;
+import platform.ios.pages.HomePage;
 import platform.ios.runner.BaseIOSTest;
 
 /**
@@ -11,7 +12,7 @@ public class HomeTest extends BaseIOSTest {
     @Test
     public void Test(){
 
-        loginPage.inputPassword("asd");
+        loginPage.signIn("asd@mail.com", "Welcome123");
     }
 
 }
