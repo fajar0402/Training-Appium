@@ -6,7 +6,7 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 /**
  * Created by c1mnf3tddty3 on 10/6/15.
  */
-public class AbstractPage {
+public class AbstractPage extends BaseAcceptance {
 
     /**
      *   OliveGarden - Page Objects Module
