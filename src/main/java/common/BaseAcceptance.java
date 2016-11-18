@@ -1,5 +1,6 @@
 package common;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -140,11 +141,7 @@ public class BaseAcceptance {
 
     protected final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(this.getClass());
 
-    protected MobileDriver driver;
-
-    public MobileDriver getDriver(){
-        return driver;
-    }
+    protected static AppiumDriver driver;
 
     private ArrayList<AbstractPage> pages = new ArrayList<AbstractPage>();
 
